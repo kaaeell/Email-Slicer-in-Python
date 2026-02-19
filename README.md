@@ -1,43 +1,109 @@
-# Email Slicer (Python)
+# Email Slicer in Python
 
-A beginner-friendly Python project that takes an email address, validates it, and extracts useful parts such as the username, domain name, and extension.
+A simple Python CLI tool that extracts useful information from an email address.
 
-This project is designed to practice string manipulation, input validation, and control flow in Python.
+This project started as a beginner exercise and was later improved to include better validation, cleaner structure, and command-line support.
 
 ---
 
 ## Features
-- Validates basic email format
-- Extracts username
-- Extracts domain name
-- Extracts domain extension
-- Allows the user to repeat or exit
+
+- Validate email format using Regex
+- Extract:
+  - Username
+  - Domain
+  - Extension
+- Optional username masking (for privacy)
+- Option to save results to a JSON file
+- Interactive mode
+- Command-line argument support
 
 ---
 
-## How to Run the Program
+## Installation
 
-1. Make sure Python is installed on your system
-2. Download or clone this repository
-3. Open a terminal in the project folder
-4. Run the file using: python main.py
+Clone the repository:
 
+```bash
+git clone https://github.com/kaaeell/Email-Slicer-in-Python.git
+cd Email-Slicer-in-Python
+```
+
+Run the program:
+
+```bash
+python email_slicer.py
+```
 
 ---
 
-## Concepts Used
+## Usage
+
+### Interactive Mode
+
+```bash
+python email_slicer.py
+```
+
+Type the email manually when prompted.
+
+---
+
+### Pass Email Directly
+
+```bash
+python email_slicer.py -e example@gmail.com
+```
+
+---
+
+### Mask Username
+
+```bash
+python email_slicer.py -e example@gmail.com -m
+```
+
+---
+
+### Save Results to JSON
+
+```bash
+python email_slicer.py -e example@gmail.com -s
+```
+
+The results will be saved in:
+
+```
+email_results.json
+```
+
+---
+
+## Example Output
+
+```
+--- Email Info ---
+Username  : example
+Domain    : gmail
+Extension : .com
+```
+
+---
+
+## Why I Built This
+
+I built this project to practice:
+
 - String manipulation
-- Conditional statements
-- While loops
-- Input validation
-- Program flow control
+- Regular expressions
+- Writing modular Python code
+- Using argparse
+- Structuring small CLI tools properly
 
 ---
 
-## Possible Improvements
-- Use regular expressions for better validation
-- Support more complex email formats
-- Convert the program into a GUI application
-- Save results to a file
+## Future Improvements
 
-
+- Export to CSV
+- Add GUI version (Tkinter)
+- Add unit tests
